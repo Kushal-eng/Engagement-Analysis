@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
@@ -14,6 +13,7 @@ st.set_page_config(
     layout="wide"
 )
 
+# ================= LOAD DATA =================
 df = pd.read_csv("campaign_engagement_synthetic_dataset.csv")
 
 st.title("Marketing Campaign Engagement Prediction Dashboard")
@@ -30,15 +30,8 @@ with col1:
     st.metric("Total Campaign Activities", len(df))
 
 with col2:
-    engagement_counts = df["engagement_label"].value_counts().reset_index()
-    engagement_counts.columns = ["Engagement Level", "Count"]
-
-    fig = px.bar(
-        engagement_counts,
-        x="Engagement Level",
-        y="Count"
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    engagement_counts = df["engagement_label"].value_counts()
+    st.bar_chart(engagement_counts)
     st.write(
         "This chart shows how past campaigns are distributed across engagement levels."
     )
@@ -49,37 +42,15 @@ st.header("Key Insights")
 col3, col4 = st.columns(2)
 
 with col3:
-    content_perf = (
-        df.groupby("content_type")["past_engagement_rate"]
-        .mean()
-        .reset_index()
-        .sort_values("past_engagement_rate", ascending=False)
-    )
-
-    fig = px.bar(
-        content_perf,
-        x="content_type",
-        y="past_engagement_rate"
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    content_perf = df.groupby("content_type")["past_engagement_rate"].mean()
+    st.bar_chart(content_perf)
     st.write(
         "Some content types consistently generate higher engagement than others."
     )
 
 with col4:
-    channel_perf = (
-        df.groupby("channel")["past_engagement_rate"]
-        .mean()
-        .reset_index()
-        .sort_values("past_engagement_rate", ascending=False)
-    )
-
-    fig = px.bar(
-        channel_perf,
-        x="channel",
-        y="past_engagement_rate"
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    channel_perf = df.groupby("channel")["past_engagement_rate"].mean()
+    st.bar_chart(channel_perf)
     st.write(
         "Channels differ in how effectively they engage audiences."
     )
@@ -87,35 +58,15 @@ with col4:
 col5, col6 = st.columns(2)
 
 with col5:
-    media_perf = (
-        df.groupby("media_type")["past_engagement_rate"]
-        .mean()
-        .reset_index()
-    )
-
-    fig = px.bar(
-        media_perf,
-        x="media_type",
-        y="past_engagement_rate"
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    media_perf = df.groupby("media_type")["past_engagement_rate"].mean()
+    st.bar_chart(media_perf)
     st.write(
         "Media format has a clear impact on engagement levels."
     )
 
 with col6:
-    hour_perf = (
-        df.groupby("posting_hour")["past_engagement_rate"]
-        .mean()
-        .reset_index()
-    )
-
-    fig = px.line(
-        hour_perf,
-        x="posting_hour",
-        y="past_engagement_rate"
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    hour_perf = df.groupby("posting_hour")["past_engagement_rate"].mean()
+    st.line_chart(hour_perf)
     st.write(
         "Engagement varies depending on the time content is posted."
     )
@@ -157,7 +108,7 @@ preprocessor = ColumnTransformer(
 )
 
 model = RandomForestClassifier(
-    n_estimators=200,
+    n_estimators=150,
     random_state=42
 )
 
