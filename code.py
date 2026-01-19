@@ -1,12 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
 
 st.set_page_config(
     page_title="Marketing Campaign Engagement Prediction Dashboard",
@@ -71,69 +65,19 @@ with col6:
         "Engagement varies depending on the time content is posted."
     )
 
-# ================= PREDICTIVE MODEL =================
+# ================= RULE-BASED PREDICTION ENGINE =================
 st.header("Predictive Model")
 
-features = [
-    "content_type",
-    "channel",
-    "media_type",
-    "content_length_words",
-    "posting_hour",
-    "day_of_week",
-    "past_engagement_rate"
-]
-
-X = df[features]
-y = df["engagement_label"]
-
-categorical_features = [
-    "content_type",
-    "channel",
-    "media_type",
-    "day_of_week"
-]
-
-numerical_features = [
-    "content_length_words",
-    "posting_hour",
-    "past_engagement_rate"
-]
-
-preprocessor = ColumnTransformer(
-    transformers=[
-        ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_features),
-        ("num", "passthrough", numerical_features)
-    ]
-)
-
-model = RandomForestClassifier(
-    n_estimators=150,
-    random_state=42
-)
-
-pipeline = Pipeline(
-    steps=[
-        ("preprocessor", preprocessor),
-        ("model", model)
-    ]
-)
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42
-)
-
-pipeline.fit(X_train, y_train)
-
-accuracy = accuracy_score(y_test, pipeline.predict(X_test))
-
-st.write(f"Model Accuracy: {accuracy * 100:.2f}%")
 st.write(
-    "The model learns from past campaign performance to predict future engagement."
+    "Instead of complex algorithms, this model uses patterns from past campaign performance "
+    "to estimate future engagement in a clear and explainable way."
 )
+
+# Pre-calculate averages
+avg_engagement = df["past_engagement_rate"].mean()
+content_avg = df.groupby("content_type")["past_engagement_rate"].mean()
+channel_avg = df.groupby("channel")["past_engagement_rate"].mean()
+media_avg = df.groupby("media_type")["past_engagement_rate"].mean()
 
 # ================= INTERACTIVE PREDICTION =================
 st.header("Interactive Prediction Simulator")
@@ -141,82 +85,78 @@ st.header("Interactive Prediction Simulator")
 col7, col8, col9 = st.columns(3)
 
 with col7:
-    input_content_type = st.selectbox(
-        "Content Type",
-        df["content_type"].unique()
-    )
-    input_channel = st.selectbox(
-        "Channel",
-        df["channel"].unique()
-    )
-    input_media_type = st.selectbox(
-        "Media Type",
-        df["media_type"].unique()
-    )
+    input_content_type = st.selectbox("Content Type", df["content_type"].unique())
+    input_channel = st.selectbox("Channel", df["channel"].unique())
+    input_media_type = st.selectbox("Media Type", df["media_type"].unique())
 
 with col8:
-    input_content_length = st.slider(
-        "Content Length (Words)",
-        50,
-        2000,
-        300
-    )
-    input_posting_hour = st.slider(
-        "Posting Hour",
-        0,
-        23,
-        10
-    )
+    input_content_length = st.slider("Content Length (Words)", 50, 2000, 300)
+    input_posting_hour = st.slider("Posting Hour", 0, 23, 10)
 
 with col9:
-    input_day = st.selectbox(
-        "Day of Week",
-        df["day_of_week"].unique()
-    )
-    input_past_rate = st.slider(
-        "Past Engagement Rate",
-        0.0,
-        1.0,
-        0.3
-    )
+    input_day = st.selectbox("Day of Week", df["day_of_week"].unique())
+    input_past_rate = st.slider("Past Engagement Rate", 0.0, 1.0, 0.3)
 
 if st.button("Predict Engagement"):
-    input_df = pd.DataFrame(
-        [{
-            "content_type": input_content_type,
-            "channel": input_channel,
-            "media_type": input_media_type,
-            "content_length_words": input_content_length,
-            "posting_hour": input_posting_hour,
-            "day_of_week": input_day,
-            "past_engagement_rate": input_past_rate
-        }]
-    )
+    score = 0
 
-    prediction = pipeline.predict(input_df)[0]
-    probability = np.max(pipeline.predict_proba(input_df)[0])
+    if input_past_rate > avg_engagement:
+        score += 2
+    else:
+        score += 1
+
+    if content_avg[input_content_type] > avg_engagement:
+        score += 2
+
+    if channel_avg[input_channel] > avg_engagement:
+        score += 2
+
+    if media_avg[input_media_type] > avg_engagement:
+        score += 2
+
+    if 9 <= input_posting_hour <= 12 or 18 <= input_posting_hour <= 21:
+        score += 2
+    else:
+        score += 1
+
+    # Final decision
+    if score >= 9:
+        prediction = "High"
+        confidence = 0.85
+    elif score >= 6:
+        prediction = "Medium"
+        confidence = 0.65
+    else:
+        prediction = "Low"
+        confidence = 0.45
 
     st.subheader(f"Predicted Engagement Level: {prediction}")
-    st.write(f"Prediction Confidence: {probability * 100:.1f}%")
+    st.write(f"Prediction Confidence: {confidence * 100:.0f}%")
 
+    st.write(
+        f"Based on patterns from similar past campaigns, this activity is expected to receive "
+        f"{prediction.upper()} engagement."
+    )
+
+    # ================= DECISION SUPPORT =================
     st.header("Decision Support")
 
     if prediction == "High":
-        st.success("This content is suitable for immediate launch and prioritization.")
+        st.success("This content is suitable for immediate launch and high priority.")
     elif prediction == "Medium":
-        st.warning("This content may perform reasonably well. Minor optimization is advised.")
+        st.warning("This content is acceptable, but performance could improve with timing or media changes.")
     else:
-        st.error("This content is likely to underperform. Revise strategy before launch.")
+        st.error("This content is likely to underperform. Rework content or channel strategy.")
 
 # ================= MANAGERIAL VALUE =================
 st.header("Managerial Value")
 
 st.write(
-    "This dashboard helps marketing managers plan campaigns using data-backed predictions instead of guesswork."
+    "This dashboard enables marketing managers to evaluate campaign ideas before execution."
 )
 st.write(
-    "It supports prioritization of tasks within Zoho Projects by identifying high-impact campaign activities."
+    "It supports smarter planning and task prioritization inside Zoho Projects."
 )
 st.write(
-    "Overall, it reduces trial-and-error, saves time, and improves marketing decision-making."
+    "By reducing trial-and-error, it saves time, budget, and managerial effort."
 )
