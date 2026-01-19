@@ -1,0 +1,301 @@
+content_id,content_type,channel,media_type,content_length_words,posting_hour,day_of_week,past_engagement_rate,engagement_label
+1,Email,Email,Text,190,10,Saturday,1.97,Low
+2,Email,Email,Video,329,14,Saturday,1.02,Low
+3,Email,Email,Text,161,17,Monday,1.9,Low
+4,Email,Email,Video,416,16,Tuesday,4.4,High
+5,Ad Creative,Instagram,Image,192,8,Friday,5.36,High
+6,Social Media Post,Google Ads,Image,129,20,Wednesday,1.79,Low
+7,Website Content,Website,Text,244,21,Monday,1.08,Low
+8,Website Content,Website,Video,463,15,Wednesday,0.76,Low
+9,Email,Email,Image,332,18,Monday,2.26,Medium
+10,Website Content,Website,Video,410,18,Tuesday,0.92,Low
+11,Social Media Post,Google Ads,Text,169,14,Sunday,5.7,High
+12,Website Content,Website,Image,477,13,Saturday,2.69,Medium
+13,Website Content,Website,Text,186,18,Saturday,4.71,High
+14,Email,Email,Video,137,11,Saturday,3.7,Medium
+15,Social Media Post,Google Ads,Image,377,11,Wednesday,4.63,High
+16,Website Content,Website,Text,470,13,Tuesday,0.69,Low
+17,Ad Creative,Google Ads,Text,340,13,Tuesday,5.76,High
+18,Social Media Post,Google Ads,Image,284,10,Saturday,1.36,Low
+19,Social Media Post,Google Ads,Video,269,14,Friday,5.89,High
+20,Website Content,Website,Text,310,20,Tuesday,3.46,Medium
+21,Email,Email,Text,371,18,Tuesday,1.46,Low
+22,Ad Creative,Instagram,Image,355,16,Thursday,6.48,High
+23,Website Content,Website,Video,55,9,Sunday,4.58,High
+24,Website Content,Website,Video,107,10,Wednesday,2.26,Medium
+25,Ad Creative,Instagram,Video,184,20,Saturday,6.33,High
+26,Social Media Post,Instagram,Video,480,17,Wednesday,4.33,High
+27,Social Media Post,Instagram,Image,132,20,Sunday,3.74,Medium
+28,Email,Email,Video,300,22,Wednesday,0.62,Low
+29,Website Content,Website,Image,79,17,Tuesday,1.95,Low
+30,Email,Email,Text,298,20,Saturday,5.4,High
+31,Social Media Post,Instagram,Video,331,16,Thursday,1.49,Low
+32,Ad Creative,Instagram,Video,423,19,Sunday,4.64,High
+33,Website Content,Website,Image,382,22,Saturday,2.74,Medium
+34,Ad Creative,Instagram,Text,82,17,Tuesday,2.53,Medium
+35,Social Media Post,Instagram,Text,412,11,Monday,4.29,High
+36,Email,Email,Text,219,11,Sunday,0.93,Low
+37,Website Content,Website,Video,159,19,Thursday,3.74,Medium
+38,Ad Creative,Instagram,Image,258,9,Sunday,1.64,Low
+39,Ad Creative,Google Ads,Image,289,8,Thursday,5.68,High
+40,Email,Email,Text,422,21,Thursday,2.54,Medium
+41,Email,Email,Text,147,10,Tuesday,3.72,Medium
+42,Ad Creative,Instagram,Image,177,9,Thursday,5.75,High
+43,Ad Creative,Instagram,Text,326,9,Saturday,5.52,High
+44,Social Media Post,Instagram,Image,296,14,Thursday,1.78,Low
+45,Email,Email,Text,51,12,Thursday,6.41,High
+46,Ad Creative,Google Ads,Image,424,16,Saturday,6.47,High
+47,Ad Creative,Instagram,Text,161,17,Wednesday,6.31,High
+48,Email,Email,Video,79,15,Wednesday,0.8,Low
+49,Social Media Post,Instagram,Video,485,17,Monday,1.61,Low
+50,Email,Email,Video,170,22,Sunday,2.92,Medium
+51,Social Media Post,Instagram,Video,264,17,Monday,4.44,High
+52,Website Content,Website,Image,392,11,Tuesday,4.8,High
+53,Website Content,Website,Image,393,15,Tuesday,4.37,High
+54,Website Content,Website,Text,284,17,Monday,4.23,High
+55,Email,Email,Text,159,10,Friday,3.54,Medium
+56,Website Content,Website,Text,239,15,Tuesday,2.21,Medium
+57,Website Content,Website,Video,384,18,Sunday,3.67,Medium
+58,Website Content,Website,Video,499,9,Monday,1.31,Low
+59,Email,Email,Video,129,17,Friday,2.13,Medium
+60,Social Media Post,Google Ads,Text,374,16,Saturday,5.62,High
+61,Ad Creative,Google Ads,Text,374,12,Monday,3.04,Medium
+62,Email,Email,Text,444,12,Wednesday,1.28,Low
+63,Social Media Post,Google Ads,Video,268,9,Saturday,3.87,Medium
+64,Email,Email,Video,329,13,Tuesday,0.72,Low
+65,Social Media Post,Google Ads,Text,207,22,Monday,2.69,Medium
+66,Email,Email,Image,399,9,Tuesday,2.0,Low
+67,Website Content,Website,Video,258,19,Sunday,6.34,High
+68,Social Media Post,Instagram,Text,465,14,Sunday,1.56,Low
+69,Email,Email,Text,220,14,Saturday,5.19,High
+70,Social Media Post,Google Ads,Text,409,21,Sunday,1.15,Low
+71,Email,Email,Image,152,15,Tuesday,5.4,High
+72,Website Content,Website,Image,457,11,Sunday,5.73,High
+73,Email,Email,Video,254,21,Tuesday,2.47,Medium
+74,Email,Email,Image,378,18,Wednesday,3.56,Medium
+75,Website Content,Website,Text,499,10,Monday,6.32,High
+76,Website Content,Website,Text,355,19,Monday,3.11,Medium
+77,Website Content,Website,Image,311,22,Friday,1.19,Low
+78,Social Media Post,Google Ads,Text,273,22,Saturday,0.51,Low
+79,Social Media Post,Google Ads,Image,390,17,Monday,6.02,High
+80,Website Content,Website,Video,113,12,Sunday,4.82,High
+81,Website Content,Website,Video,217,12,Thursday,2.91,Medium
+82,Social Media Post,Instagram,Image,244,22,Saturday,4.56,High
+83,Social Media Post,Google Ads,Image,476,12,Friday,0.5,Low
+84,Social Media Post,Google Ads,Video,385,15,Friday,2.43,Medium
+85,Ad Creative,Instagram,Video,456,20,Thursday,5.91,High
+86,Social Media Post,Instagram,Image,389,13,Friday,4.3,High
+87,Email,Email,Text,208,11,Saturday,1.85,Low
+88,Social Media Post,Instagram,Text,293,20,Tuesday,4.17,High
+89,Email,Email,Image,372,19,Thursday,3.95,Medium
+90,Ad Creative,Google Ads,Image,125,8,Tuesday,4.44,High
+91,Email,Email,Image,140,19,Tuesday,5.32,High
+92,Ad Creative,Instagram,Video,484,10,Tuesday,1.23,Low
+93,Ad Creative,Google Ads,Image,467,16,Friday,4.82,High
+94,Ad Creative,Google Ads,Text,491,12,Saturday,3.35,Medium
+95,Social Media Post,Google Ads,Video,370,15,Thursday,1.94,Low
+96,Email,Email,Video,170,13,Wednesday,2.13,Medium
+97,Email,Email,Text,168,10,Tuesday,2.8,Medium
+98,Social Media Post,Instagram,Image,219,14,Thursday,3.76,Medium
+99,Email,Email,Text,265,20,Sunday,2.84,Medium
+100,Email,Email,Video,294,13,Thursday,0.54,Low
+101,Website Content,Website,Image,477,19,Sunday,3.01,Medium
+102,Social Media Post,Google Ads,Text,273,14,Wednesday,3.41,Medium
+103,Website Content,Website,Video,458,10,Saturday,2.93,Medium
+104,Ad Creative,Instagram,Video,63,17,Friday,5.94,High
+105,Email,Email,Text,269,15,Saturday,1.31,Low
+106,Social Media Post,Instagram,Image,217,13,Thursday,1.77,Low
+107,Website Content,Website,Image,435,14,Wednesday,6.21,High
+108,Website Content,Website,Text,59,8,Thursday,4.99,High
+109,Website Content,Website,Text,85,18,Saturday,5.19,High
+110,Email,Email,Text,152,17,Tuesday,5.54,High
+111,Social Media Post,Instagram,Text,392,11,Thursday,1.19,Low
+112,Ad Creative,Google Ads,Image,360,19,Tuesday,4.14,High
+113,Email,Email,Text,105,22,Wednesday,3.97,Medium
+114,Website Content,Website,Video,242,19,Saturday,2.88,Medium
+115,Social Media Post,Instagram,Video,475,9,Saturday,4.26,High
+116,Website Content,Website,Video,462,17,Friday,1.23,Low
+117,Email,Email,Image,269,9,Friday,4.47,High
+118,Website Content,Website,Text,265,9,Sunday,5.43,High
+119,Ad Creative,Google Ads,Video,285,14,Sunday,4.74,High
+120,Social Media Post,Google Ads,Video,325,15,Sunday,5.15,High
+121,Ad Creative,Google Ads,Image,175,9,Sunday,5.48,High
+122,Website Content,Website,Image,434,17,Tuesday,3.29,Medium
+123,Ad Creative,Google Ads,Text,485,15,Thursday,2.45,Medium
+124,Social Media Post,Google Ads,Image,193,19,Wednesday,5.78,High
+125,Website Content,Website,Video,314,9,Monday,6.19,High
+126,Social Media Post,Google Ads,Image,438,15,Friday,1.94,Low
+127,Ad Creative,Google Ads,Text,200,19,Monday,1.83,Low
+128,Social Media Post,Google Ads,Video,238,16,Friday,3.34,Medium
+129,Website Content,Website,Image,331,19,Saturday,2.48,Medium
+130,Ad Creative,Google Ads,Image,168,11,Wednesday,1.22,Low
+131,Website Content,Website,Text,324,19,Saturday,6.21,High
+132,Social Media Post,Instagram,Text,297,17,Saturday,2.16,Medium
+133,Website Content,Website,Text,149,13,Sunday,2.28,Medium
+134,Social Media Post,Google Ads,Text,323,8,Saturday,1.26,Low
+135,Email,Email,Video,407,18,Wednesday,6.16,High
+136,Ad Creative,Instagram,Text,195,15,Friday,3.32,Medium
+137,Website Content,Website,Text,179,15,Monday,6.15,High
+138,Email,Email,Text,301,18,Thursday,0.94,Low
+139,Email,Email,Text,465,12,Tuesday,3.88,Medium
+140,Email,Email,Text,335,17,Monday,5.09,High
+141,Social Media Post,Google Ads,Image,202,14,Thursday,5.66,High
+142,Website Content,Website,Video,80,19,Friday,4.16,High
+143,Email,Email,Text,158,9,Saturday,2.09,Medium
+144,Social Media Post,Instagram,Text,88,14,Friday,1.44,Low
+145,Ad Creative,Google Ads,Image,168,12,Monday,2.23,Medium
+146,Ad Creative,Instagram,Video,185,18,Tuesday,5.23,High
+147,Social Media Post,Google Ads,Text,165,22,Friday,4.39,High
+148,Website Content,Website,Text,80,12,Monday,1.5,Low
+149,Website Content,Website,Image,289,19,Monday,4.63,High
+150,Ad Creative,Google Ads,Video,302,17,Friday,3.13,Medium
+151,Email,Email,Image,215,8,Saturday,4.12,High
+152,Email,Email,Text,478,17,Saturday,5.66,High
+153,Email,Email,Video,187,20,Sunday,3.96,Medium
+154,Social Media Post,Google Ads,Video,276,10,Saturday,6.0,High
+155,Ad Creative,Google Ads,Text,228,13,Thursday,2.95,Medium
+156,Email,Email,Text,260,12,Wednesday,4.66,High
+157,Ad Creative,Instagram,Image,211,9,Monday,2.01,Medium
+158,Ad Creative,Instagram,Video,327,8,Sunday,3.27,High
+159,Social Media Post,Google Ads,Video,305,20,Sunday,4.25,High
+160,Email,Email,Text,331,12,Wednesday,1.29,Low
+161,Ad Creative,Google Ads,Text,372,11,Monday,4.15,High
+162,Social Media Post,Google Ads,Video,332,11,Monday,2.95,Medium
+163,Email,Email,Image,381,15,Monday,5.49,High
+164,Website Content,Website,Video,189,15,Saturday,2.99,Medium
+165,Ad Creative,Instagram,Image,124,22,Friday,2.8,Medium
+166,Social Media Post,Instagram,Image,454,13,Sunday,5.63,High
+167,Website Content,Website,Text,421,17,Wednesday,2.29,Medium
+168,Ad Creative,Instagram,Image,297,16,Friday,2.57,Medium
+169,Ad Creative,Google Ads,Image,146,11,Sunday,6.38,High
+170,Ad Creative,Instagram,Image,212,19,Monday,4.97,High
+171,Ad Creative,Google Ads,Video,470,10,Sunday,4.41,High
+172,Ad Creative,Instagram,Text,352,9,Friday,2.49,Medium
+173,Ad Creative,Instagram,Video,57,14,Thursday,4.83,High
+174,Social Media Post,Instagram,Image,185,19,Sunday,2.53,Medium
+175,Ad Creative,Instagram,Image,395,14,Sunday,5.66,High
+176,Website Content,Website,Video,438,16,Saturday,3.43,Medium
+177,Email,Email,Video,170,22,Monday,4.29,High
+178,Website Content,Website,Text,96,9,Saturday,3.1,Medium
+179,Email,Email,Image,405,8,Tuesday,2.3,Medium
+180,Email,Email,Image,78,13,Sunday,2.26,Medium
+181,Ad Creative,Instagram,Text,260,20,Friday,3.9,Medium
+182,Social Media Post,Instagram,Text,362,17,Monday,5.73,High
+183,Social Media Post,Google Ads,Video,168,12,Tuesday,3.27,Medium
+184,Ad Creative,Google Ads,Video,461,12,Monday,3.29,Medium
+185,Social Media Post,Instagram,Image,350,14,Wednesday,2.29,Medium
+186,Website Content,Website,Image,204,14,Sunday,1.7,Low
+187,Ad Creative,Instagram,Text,342,12,Thursday,2.65,Medium
+188,Website Content,Website,Text,387,8,Sunday,2.87,Medium
+189,Email,Email,Video,304,22,Saturday,5.5,High
+190,Website Content,Website,Text,460,18,Friday,2.61,Medium
+191,Social Media Post,Google Ads,Video,419,18,Sunday,5.1,High
+192,Social Media Post,Instagram,Video,70,15,Saturday,2.35,Medium
+193,Email,Email,Video,424,22,Wednesday,1.29,Low
+194,Website Content,Website,Image,262,10,Saturday,1.55,Low
+195,Website Content,Website,Video,189,12,Friday,5.48,High
+196,Ad Creative,Google Ads,Video,223,15,Sunday,5.33,High
+197,Email,Email,Text,165,19,Sunday,5.66,High
+198,Ad Creative,Google Ads,Text,252,16,Sunday,0.58,Low
+199,Email,Email,Image,394,12,Wednesday,4.99,High
+200,Ad Creative,Google Ads,Text,169,17,Saturday,3.33,Medium
+201,Website Content,Website,Video,381,21,Tuesday,0.88,Low
+202,Ad Creative,Google Ads,Video,109,8,Thursday,1.34,Low
+203,Website Content,Website,Image,99,16,Monday,1.91,Low
+204,Social Media Post,Google Ads,Image,393,19,Wednesday,6.2,High
+205,Ad Creative,Instagram,Image,100,17,Saturday,5.5,High
+206,Ad Creative,Google Ads,Text,239,15,Saturday,1.8,Low
+207,Social Media Post,Google Ads,Text,238,18,Saturday,3.77,Medium
+208,Website Content,Website,Text,191,9,Thursday,1.64,Low
+209,Ad Creative,Instagram,Video,378,8,Tuesday,4.34,High
+210,Email,Email,Image,114,11,Tuesday,5.22,High
+211,Email,Email,Video,350,21,Tuesday,1.8,Low
+212,Social Media Post,Google Ads,Text,355,21,Sunday,0.52,Low
+213,Social Media Post,Instagram,Video,458,18,Wednesday,1.55,Low
+214,Email,Email,Text,233,11,Monday,5.24,High
+215,Website Content,Website,Text,185,19,Tuesday,0.81,Low
+216,Ad Creative,Instagram,Video,293,13,Monday,3.19,High
+217,Email,Email,Image,163,8,Friday,6.17,High
+218,Website Content,Website,Image,65,15,Saturday,0.86,Low
+219,Ad Creative,Google Ads,Video,301,15,Monday,4.77,High
+220,Email,Email,Text,361,10,Wednesday,1.39,Low
+221,Website Content,Website,Video,349,13,Saturday,3.79,Medium
+222,Ad Creative,Google Ads,Image,359,20,Friday,3.08,Medium
+223,Email,Email,Video,499,19,Saturday,5.11,High
+224,Social Media Post,Google Ads,Image,261,15,Tuesday,2.53,Medium
+225,Ad Creative,Google Ads,Video,210,18,Monday,3.06,Medium
+226,Website Content,Website,Image,401,9,Tuesday,6.04,High
+227,Email,Email,Text,271,19,Monday,1.08,Low
+228,Website Content,Website,Text,80,16,Friday,4.02,High
+229,Website Content,Website,Video,260,18,Monday,2.62,Medium
+230,Ad Creative,Instagram,Image,209,17,Friday,2.61,Medium
+231,Social Media Post,Instagram,Video,164,13,Thursday,5.58,High
+232,Website Content,Website,Text,192,20,Sunday,3.94,Medium
+233,Ad Creative,Instagram,Video,474,8,Saturday,4.66,High
+234,Social Media Post,Google Ads,Video,208,13,Sunday,6.03,High
+235,Email,Email,Text,123,14,Sunday,3.9,Medium
+236,Email,Email,Text,374,9,Saturday,6.33,High
+237,Social Media Post,Google Ads,Image,224,12,Thursday,1.44,Low
+238,Website Content,Website,Video,93,10,Friday,5.8,High
+239,Social Media Post,Instagram,Video,189,14,Monday,3.16,High
+240,Ad Creative,Google Ads,Image,160,9,Wednesday,5.03,High
+241,Website Content,Website,Image,195,17,Monday,4.57,High
+242,Ad Creative,Google Ads,Text,252,8,Tuesday,6.41,High
+243,Email,Email,Text,158,20,Wednesday,5.1,High
+244,Website Content,Website,Image,111,19,Wednesday,0.55,Low
+245,Ad Creative,Instagram,Text,322,16,Thursday,4.72,High
+246,Website Content,Website,Text,491,14,Thursday,4.95,High
+247,Email,Email,Image,491,14,Monday,2.38,Medium
+248,Ad Creative,Google Ads,Image,257,13,Monday,0.63,Low
+249,Social Media Post,Google Ads,Video,95,9,Wednesday,3.12,Medium
+250,Social Media Post,Google Ads,Video,318,21,Thursday,0.97,Low
+251,Website Content,Website,Video,163,10,Wednesday,2.5,Medium
+252,Email,Email,Video,108,11,Saturday,3.68,Medium
+253,Website Content,Website,Image,469,10,Saturday,4.37,High
+254,Social Media Post,Instagram,Text,151,10,Wednesday,1.54,Low
+255,Email,Email,Text,371,20,Sunday,3.46,Medium
+256,Ad Creative,Google Ads,Video,127,15,Wednesday,3.14,Medium
+257,Ad Creative,Google Ads,Image,78,9,Friday,2.61,Medium
+258,Website Content,Website,Image,69,21,Thursday,0.84,Low
+259,Website Content,Website,Text,492,9,Saturday,6.36,High
+260,Ad Creative,Google Ads,Video,455,8,Friday,4.93,High
+261,Ad Creative,Instagram,Image,293,8,Friday,3.51,Medium
+262,Ad Creative,Instagram,Image,93,10,Saturday,3.53,Medium
+263,Email,Email,Text,274,16,Saturday,6.45,High
+264,Social Media Post,Google Ads,Image,248,13,Wednesday,2.95,Medium
+265,Email,Email,Video,221,9,Saturday,0.9,Low
+266,Ad Creative,Google Ads,Image,486,22,Saturday,4.44,High
+267,Social Media Post,Google Ads,Text,389,13,Friday,1.35,Low
+268,Website Content,Website,Video,389,17,Saturday,2.85,Medium
+269,Email,Email,Image,242,13,Friday,4.36,High
+270,Social Media Post,Instagram,Video,266,8,Saturday,3.55,High
+271,Website Content,Website,Image,159,20,Tuesday,2.55,Medium
+272,Ad Creative,Instagram,Text,129,21,Tuesday,0.96,Low
+273,Email,Email,Video,326,22,Sunday,5.51,High
+274,Email,Email,Video,498,10,Wednesday,5.1,High
+275,Ad Creative,Instagram,Text,475,17,Tuesday,4.66,High
+276,Social Media Post,Google Ads,Text,236,11,Thursday,4.56,High
+277,Ad Creative,Google Ads,Video,279,11,Sunday,1.9,Low
+278,Website Content,Website,Image,149,17,Sunday,2.71,Medium
+279,Ad Creative,Google Ads,Image,245,14,Sunday,3.52,Medium
+280,Social Media Post,Instagram,Video,496,18,Tuesday,2.0,Low
+281,Ad Creative,Google Ads,Video,414,21,Monday,5.58,High
+282,Email,Email,Image,440,15,Monday,1.46,Low
+283,Social Media Post,Google Ads,Text,468,13,Tuesday,3.21,Medium
+284,Email,Email,Image,252,11,Monday,3.51,Medium
+285,Ad Creative,Instagram,Image,64,9,Tuesday,2.41,Medium
+286,Website Content,Website,Text,69,21,Tuesday,2.22,Medium
+287,Ad Creative,Instagram,Video,279,22,Thursday,4.19,High
+288,Email,Email,Text,160,16,Wednesday,5.51,High
+289,Ad Creative,Instagram,Image,204,11,Tuesday,1.23,Low
+290,Ad Creative,Google Ads,Text,478,17,Monday,5.93,High
+291,Email,Email,Video,344,10,Friday,1.95,Low
+292,Website Content,Website,Image,364,17,Monday,2.62,Medium
+293,Ad Creative,Instagram,Video,93,13,Saturday,3.64,High
+294,Email,Email,Video,309,16,Friday,5.22,High
+295,Email,Email,Image,290,14,Sunday,0.76,Low
+296,Website Content,Website,Image,58,9,Saturday,2.64,Medium
+297,Website Content,Website,Text,386,20,Saturday,4.27,High
+298,Website Content,Website,Text,230,21,Monday,3.78,Medium
+299,Social Media Post,Google Ads,Video,373,10,Thursday,1.59,Low
+300,Email,Email,Video,284,11,Sunday,0.72,Low
