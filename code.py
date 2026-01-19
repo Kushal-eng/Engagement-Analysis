@@ -1,4 +1,4 @@
-```python
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -185,4 +185,4 @@ st.write(
 st.write(
     "By using data-driven predictions, teams can reduce trial-and-error and allocate time and budgets more efficiently."
 )
-```
+
