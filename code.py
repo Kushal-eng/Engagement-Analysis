@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # ================= LOAD DATA =================
-df = pd.read_csv("campaign_engagement_synthetic_dataset.csv")
+df = pd.read_csv("C:\Users\kotra\Downloads\campaign_engagement_synthetic_dataset.csv")
 
 st.title("Marketing Campaign Engagement Prediction Dashboard")
 st.write(
