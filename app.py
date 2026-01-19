@@ -8,9 +8,9 @@ st.set_page_config(
 )
 
 # ================= LOAD DATA =================
-df = pd.read_csv(df = pd.read_csv("C:\\Users\\kotra\\Downloads\\campaign_engagement_synthetic_dataset.csv")
-                )
+df = pd.read_csv("campaign_engagement_synthetic_dataset.csv")
 
+# ================= HEADER =================
 st.title("Marketing Campaign Engagement Prediction Dashboard")
 st.write(
     "This dashboard predicts how well a marketing activity is likely to perform before it is launched."
@@ -66,15 +66,14 @@ with col6:
         "Engagement varies depending on the time content is posted."
     )
 
-# ================= RULE-BASED PREDICTION ENGINE =================
+# ================= RULE-BASED PREDICTION MODEL =================
 st.header("Predictive Model")
 
 st.write(
-    "Instead of complex algorithms, this model uses patterns from past campaign performance "
-    "to estimate future engagement in a clear and explainable way."
+    "The model uses clear patterns from past campaign data to estimate future engagement "
+    "without complex algorithms."
 )
 
-# Pre-calculate averages
 avg_engagement = df["past_engagement_rate"].mean()
 content_avg = df.groupby("content_type")["past_engagement_rate"].mean()
 channel_avg = df.groupby("channel")["past_engagement_rate"].mean()
@@ -120,7 +119,6 @@ if st.button("Predict Engagement"):
     else:
         score += 1
 
-    # Final decision
     if score >= 9:
         prediction = "High"
         confidence = 0.85
@@ -134,30 +132,24 @@ if st.button("Predict Engagement"):
     st.subheader(f"Predicted Engagement Level: {prediction}")
     st.write(f"Prediction Confidence: {confidence * 100:.0f}%")
 
-    st.write(
-        f"Based on patterns from similar past campaigns, this activity is expected to receive "
-        f"{prediction.upper()} engagement."
-    )
-
-    # ================= DECISION SUPPORT =================
     st.header("Decision Support")
 
     if prediction == "High":
         st.success("This content is suitable for immediate launch and high priority.")
     elif prediction == "Medium":
-        st.warning("This content is acceptable, but performance could improve with timing or media changes.")
+        st.warning("This content may perform reasonably well. Minor optimization is advised.")
     else:
-        st.error("This content is likely to underperform. Rework content or channel strategy.")
+        st.error("This content is likely to underperform. Revise strategy before launch.")
 
 # ================= MANAGERIAL VALUE =================
 st.header("Managerial Value")
 
 st.write(
-    "This dashboard enables marketing managers to evaluate campaign ideas before execution."
+    "This dashboard helps marketing managers plan campaigns before execution."
 )
 st.write(
-    "It supports smarter planning and task prioritization inside Zoho Projects."
+    "It supports task prioritization in Zoho Projects by identifying high-impact activities."
 )
 st.write(
-    "By reducing trial-and-error, it saves time, budget, and managerial effort."
+    "It reduces trial-and-error and improves decision-making using historical insights."
 )
